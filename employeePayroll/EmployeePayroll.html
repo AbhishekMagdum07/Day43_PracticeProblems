@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payroll Form</title>
+    <link rel="stylesheet" href="/EmployeePayroll.css">
+    <script src="/EmployeePayroll.js"></script>
+</head>
+<body>
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="/logo/logo.png" alt="">
+            <div>
+                <span class="emp-text">EMPLOYEE</span><br>
+                <span class="emp-text emp-payroll">PAYROLL</span>
+            </div>
+        </div>
+    </header>
+    <div class="form-content">
+        <form class="form" action="#" onsubmit="save();return false">
+           <div class="form-head">Employee Payroll form</div>
+           <div class="row-content">
+            <label class="lable text" for="name">Name</label>
+            <input class="input" type="text" id="name" name="name" placeholder="your name :" required>
+           </div>
+       
+    <div class="row-content">
+        <br><label for="lebel text" form="profile">Profile image</label>
+        <div class="profile-radio-content">
+            <label>
+                <input type="radio" id="profile1" name="profile" value="/profile-images\Ellipse -1.png">
+                <img class="profile" id="image1" src="/profile-images/Ellipse -1.png">
+            </label>
+            <label>
+                <input type="radio" id="profile2" name="profile" value="/profile-images\Ellipse -1.png">
+                <img class="profile" id="image2" src="/profile-images/Ellipse -2.png">
+            </label>
+            <label>
+                <input type="radio" id="profile3" name="profile" value="/profile-images\Ellipse -1.png">
+                <img class="profile" id="image3" src="/profile-images/Ellipse -3.png">
+            </label>
+            <label>
+                <input type="radio" id="profile4" name="profile" value="/profile-images\Ellipse -1.png">
+                <img class="profile" id="image4" src="/profile-images/Ellipse -4.png">
+            </label>
+            
+
+        </div>
+    </div><br>
+    <div class="row-content">
+        <label class="label text" for="gender">Gender</label>
+        <div class="gender">
+          <input type="radio" id="male" name="gender" value="male">
+          <label class="text" for="male">Male</label>
+          <input type="radio"  name="gender" value="female" style="margin-left: 40px;">
+          <label class="text" for="female">Female</label>
+        </div>
+      </div>
+
+      <div class="row-content">
+        <label class="label text" for="department">Department</label>
+        <div class="department">
+          <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+          <label class="text" for="hr">HR</label>
+          <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales" style="margin-left: 45px;">
+          <label class="text" for="sales">Sales</label>
+          <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance" style="margin-left: 45px;">
+          <label class="text" for="finance">Finance</label>
+          <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer" style="margin-left: 45px;">
+          <label class="text" for="engineer">Engineer</label>
+          <input class="checkbox" type="checkbox" id="others" name="others" value="Others" style="margin-left: 45px;">
+          <label class="text" for="others">Others</label>
+        </div>
+      </div>
+
+      <div class="main">
+        <label class="label text" for="salary">Salary</label>
+        <input class="range" type="range" id="slider" min="300000" max="500000" step="100" value="400000">
+        <div id="selector">
+           <div class="SelectBtn"></div>
+           <div id="SelectValue"></div>
+        </div>
+        
+      </div>
+      <script>
+        var slider = document.getElementById("slider");
+        var selector = document.getElementById("selector");
+        var SelectValue = document.getElementById("SelectValue");
+
+        SelectValue.innerHTML = slider.value;
+
+        slider.oninput = function(){
+          SelectValue.innerHTML = this.value;
+          selector.style.left = this.value + "%";
+        }
+
+      </script>
+
+      
+      <div class="row-content">
+        <label class="label text" for="start-date">Start Date</label>
+        <input class="date" type="date" id="date">
+      
+      </div>
+
+      
+      <div class="row-content">
+        <label class="label text" for="notes">Notes</label>
+        <textarea id="notes" class="input" name="Notes" placeholder="" style="height:100px"></textarea>
+      </div>
+      
+      <div>
+          <button type="reset" class="button cancelButton">Cancel</button>
+          <button type="submit" onclick="save()" class="button submitButton" id="submitButton">Submit</button>
+          <button type="reset" class="button resetButton">Reset</button>
+          
+      </div>
+      </div>
+    </form>
+    
+
+</body>
+</html>

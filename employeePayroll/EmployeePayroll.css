@@ -42,8 +42,6 @@ body{
 
 .emp-payroll { color: #42515f;}
 
-*{ box-sizing: border-box;}
-
 .form-content{
     min-height: calc(100% - 80%);
     background-color: #f7f7f7;
@@ -54,7 +52,7 @@ body{
 }
 
 .form{
-    width: 65%;
+    width: 60%;
     padding: 44px 60px;
     background: #ffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
@@ -86,27 +84,72 @@ body{
 
 .label {
     padding: 12px 12px 12px 0;
-    display: inline-block;
+    display: inline-flex;
 }
 
 .text{
+   
     font-size: 16px;
-    color: #42515f;
+    color: #0e0f0f;
     opacity: 1;
     font-family: Roboto;
 }
 
-.input{
-    width: 80%;
-    padding: 12px;
-    border: 1px solid #ccc;
+
+
+.input {
+    
+    width: 75%;
+    padding: 10px;
+    border: 2px solid #ccc;
     border-radius: 4px;
     resize: vertical;
+    margin-left: 77px;
 }
 
 .profile-radio-content{
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
+    margin-left: 30px;
+}
+
+.gender{
+    display:inline-flex;
+    margin-left: -45px;
+  
+    
+}
+
+.department{
+    display: inline-flex;
+    margin-left: -43px;
+}
+
+.range{
+    width: 500px;
+    margin-left: -40px;
+}
+#selector{
+    display: inline-flex;
+    margin-left: 20px;
+    
+}
+
+.date{
+    margin-top: px;
+    margin-left: -40px;
+    padding: 10px;
+    width: 75%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+   
+}
+#notes{
+    margin-left: -40px;
+    display: inline-flex;
+    margin-top: 30px;
 }
 
 .profile-radio-content > label {
@@ -121,13 +164,34 @@ body{
     margin-left: 12px;
 }
 
-select { 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    resize: vertical; 
-    font: normal normal normal 16px Roboto; 
-    letter-spacing: 0px; 
+
+.button { 
+    font-size: 20px; 
+    font-family: Roboto; 
+    letter-spacing: Opx; 
     color: #42515f; 
-    background-color: transparent; 
+    opacity: 1; 
+    background: transparent;
+    background-color: #e2e2e2;  
+    border: none; 
+    font-weight: 400; 
+    min-width: 140px; 
+    padding: 7px 7px; 
+    border: 1px solid #969696; 
+    cursor: pointer; 
+    margin-top: 40px;
 } 
+
+.submitButton { 
+    margin-left: 380px; 
+} 
+
+.cancelButton { 
+    text-decoration: none; 
+    text-align: center; 
+   
+} 
+
+.resetButton{
+    margin-right: -100px;
+}
